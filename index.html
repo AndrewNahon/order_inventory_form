@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="inventory.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="inventory2.js"></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <h1>Inventory Order Form</h1>
+        <h3>Date Ordered</h3>
+        <p id="order_date"></p>
+        <fieldset>
+          <dl>
+            <dt>
+              <label for="requester">Requester name</label>
+            </dt>
+            <dd>
+              <input type="text" id="requester" name="requester"/>
+            </dd>
+          </dl>
+          <h2>Shipping Address</h2>
+          <dl>
+            <dt><label for="address1">Street Address</label></dt>
+            <dd>
+              <input type="text" name="address1" />
+            </dd>
+            <dd>
+              <input type="text" name="address2" />
+            </dd>
+          </dl>
+          <dl class="partial">
+            <dt><label for="city">City</label></dt>
+            <dd><input type="text" name="city" /></dd>
+          </dl>
+          <dl class="partial">
+            <dt><label for="state">State</label></dt>
+            <dd><input type="text" name="state" /></dd>
+          </dl>
+          <dl class="partial">
+            <dt><label for="zip">Zipcode</label></dt>
+            <dd><input type="number" name="zip" /></dd>
+          </dl>
+          <h2>Items to Order</h2>
+          <table id="inventory">
+          </table>
+          <button id="add_item">Add item</button>
+          <input type="submit"/>
+        </fieldset>
+      </form>
+    </main>
+    <script type="text/template" id="template">
+      <tr>
+        <td>
+          <dl>
+            <dt>
+              <label>Name</label>
+            </dt>
+            <dd>
+              <input type="hidden" id="ID"
+            </dd>
+            <dd>
+              <input type="text" id="name_ID"/>
+            </dd>
+          </dl>
+        </td>
+        <td>
+          <dl>
+            <dt>
+              <label>Stock number</label>
+            </dt>
+            <dd>
+              <input type="text" id="stock_ID"/>
+            </dd>
+          </dl>
+        </td>
+        <td>
+          <dl>
+            <dt>
+              <label>Quantity</label>
+            </dt>
+            <dd>
+              <input type="text" id="quantity_ID"/>
+            </dd>
+          </dl>
+          <td>
+            <a href="#" class="remove">Remove item</a>
+          </td>
+        </td>
+      </tr>
+    </script>
+  </body>
+</html>
